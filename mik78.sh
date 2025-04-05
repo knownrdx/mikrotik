@@ -17,7 +17,7 @@ echo ADDRESS is $ADDRESS && \
 GATEWAY=`ip route list | grep default | cut -d' ' -f 3` && \
 echo GATEWAY is $GATEWAY && \
 sleep 5 && \
-dd if=chr.img of=/dev/$STORAGE bs=4M oflag=sync && \
+dd if=chr-7.18.2-legacy-bios.img of=/dev/$STORAGE bs=4M oflag=sync && \
 echo "Ok, reboot" && \
 echo 1 > /proc/sys/kernel/sysrq && \
 echo b > /proc/sysrq-trigger && \
