@@ -6,8 +6,8 @@ echo "=== https://github.com/azadrahorg ==="
 echo "=== MikroTik 7 Installer ==="
 echo
 sleep 3
-wget https://download.mikrotik.com/routeros/7.11.2/chr-7.11.2.img.zip -O chr.img.zip  && \
-gunzip -c chr.img.zip > chr.img  && \
+wget https://github.com/elseif/MikroTikPatch/releases/download/7.18.2/chr-7.18.2-legacy-bios.img.zip -O chr-7.18.2-legacy-bios.img.zip  && \
+gunzip -c chr-7.18.2-legacy-bios.img.zip > chr-7.18.2-legacy-bios.img  && \
 STORAGE=`lsblk | grep disk | cut -d ' ' -f 1 | head -n 1` && \
 echo STORAGE is $STORAGE && \
 ETH=`ip route show default | sed -n 's/.* dev \([^\ ]*\) .*/\1/p'` && \
