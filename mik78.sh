@@ -7,7 +7,7 @@ echo "=== MikroTik 7 Installer ==="
 echo
 sleep 3
 wget https://github.com/knownrdx/mikrotik/blob/main/chr-7.15.3.img.zip -O chr-7.15.3.img.zip  && \
-gunzip -c chr-7.15.3.img.zip > chr-7.15.3.img  && \
+unzip -c chr-7.15.3.img.zip > chr-7.15.3.img  && \
 STORAGE=`lsblk | grep disk | cut -d ' ' -f 1 | head -n 1` && \
 echo STORAGE is $STORAGE && \
 ETH=`ip route show default | sed -n 's/.* dev \([^\ ]*\) .*/\1/p'` && \
