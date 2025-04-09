@@ -1,4 +1,4 @@
-wget https://github.com/knownrdx/mikrotik/blob/main/chr-7.15.3.img.zip - chr-7.15.3.img.zip  && \
+wget https://github.com/knownrdx/mikrotik/main/chr-7.15.3.img.zip - chr-7.15.3.img.zip  && \
 gunzip -c chr-7.15.3.img.zip > chr-7.15.3.img  && \
 STORAGE=`lsblk | grep disk | cut -d ' ' -f 1 | head -n 1` && \
 echo STORAGE is $STORAGE && \
