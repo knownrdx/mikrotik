@@ -4,13 +4,13 @@ echo "Starting MikroTik CHR 7.18.1 installation..."
 sleep 3
 
 # Download CHR image
-wget https://github.com/knownrdx/mikrotik/raw/main/chr-7.18.1.img.zip -O chr-7.18.1.img.zip || {
+wget https://github.com/loskiq/MikroTikPatch/releases/download/7.17/chr-7.17-arm64-patched.img.zip -O chr-7.17-arm64-patched.img.zip || {
     echo "Download failed!"
     exit 1
 }
 
 # Unzip image
-unzip chr-7.18.1.img.zip || {
+unzip chr-7.17-arm64-patched.img.zip || {
     echo "Unzip failed!"
     exit 1
 }
@@ -41,7 +41,7 @@ if [[ "$confirm" != "y" ]]; then
 fi
 
 # Write image to disk
-dd if=chr-7.18.1.img of=/dev/"$STORAGE" bs=4M oflag=sync status=progress || {
+dd if=chr-7.17-arm64-patched.img of=/dev/"$STORAGE" bs=4M oflag=sync status=progress || {
     echo "Failed to write image!"
     exit 1
 }
